@@ -1,11 +1,3 @@
-//
-//  LoadableView.swift
-//  WorldTime
-//
-//  Created by Gabriel Theodoropoulos.
-//  Copyright © 2020 AppCoda. All rights reserved.
-//
-
 import Cocoa
 
 protocol LoadableView: AnyObject {

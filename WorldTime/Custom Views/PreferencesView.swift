@@ -1,11 +1,3 @@
-//
-//  PreferencesView.swift
-//  WorldTime
-//
-//  Created by Gabriel Theodoropoulos.
-//  Copyright © 2020 AppCoda. All rights reserved.
-//
-
 import Cocoa
 
 class PreferencesView: NSView, LoadableView {
@@ -19,6 +11,7 @@ class PreferencesView: NSView, LoadableView {
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
+    
         
         if load(fromNIBNamed: "PreferencesView") {
             populateTimezoneIDs()

@@ -1,11 +1,3 @@
-//
-//  DateTimeView.swift
-//  WorldTime
-//
-//  Created by Gabriel Theodoropoulos.
-//  Copyright © 2020 AppCoda. All rights reserved.
-//
-
 import Cocoa
 
 class DateTimeView: NSView, LoadableView {
