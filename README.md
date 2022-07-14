@@ -1,3 +1,5 @@
+[![swift-ci](https://github.com/ecamlioglu/WorldTime/actions/workflows/swift-ci.yml/badge.svg?branch=main&event=push)](https://github.com/ecamlioglu/WorldTime/actions/workflows/swift-ci.yml)
+
 # WorldTime
 
 This app for my macos learning path example app.
