@@ -1,19 +1,17 @@
-name: Swift CI
+name: swift-ci
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
-  build:
-
+  Build:
     runs-on: macos-latest
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+      - uses: actions/checkout@v3
+      - name: Install xcpretty
+        run: gem install xcpretty
+      - name: Build
+        run: xcodebuild -scheme WorldTime -project ./WorldTime.xcodeproj -sdk macosx build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED="NO" CODE_SIGN_ENTITLEMENTS="" CODE_SIGNING_ALLOWED="NO" | xcpretty && exit ${PIPESTATUS[0]}
