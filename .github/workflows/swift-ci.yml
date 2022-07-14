@@ -1,4 +1,4 @@
-name: CI
+name: swift-ci
 
 on:
   push:
@@ -11,12 +11,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/cache@v3
-        with:
-          path: .build
-          key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
-          restore-keys: |
-            ${{ runner.os }}-spm-
       - name: Install xcpretty
         run: gem install xcpretty
       - name: SwiftFormat # this is necessary since we'll format files in build phase
